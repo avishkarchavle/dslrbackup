@@ -4,8 +4,7 @@ import Home from './components/Home';
 import Code from './components/Code';
 import SignLanguageRecognition from './components/SignLanguageRecognition';
 import About from './components/About';
-import TextToSpeech from './components/TextToSpeech'
-
+import VideoRecorder from './VideoRecorder'; // Import the VideoRecorder component
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,11 +26,13 @@ function App() {
                     Sign Language Recognition
                   </Link>
                 </li>
+
                 <li className="nav-item">
-                  <Link to="/texttospeech" className="nav-link">
-                    Text to Speech
+                  <Link to="/video-recorder" className="nav-link"> {/* Add link to Video Recorder */}
+                    Video Recorder
                   </Link>
                 </li>
+
                 <li className="nav-item">
                   <Link to="/about" className="nav-link">
                     About
@@ -54,7 +55,8 @@ function App() {
             <Routes>
               <Route path="/sign-language-recognition" element={<SignLanguageRecognition />} />
               <Route path="/about" element={<About />} />
-              <Route path="/texttospeech" element={<TextToSpeech />} />
+
+              <Route path="/video-recorder" element={<VideoRecorder />} /> {/* Add route for Video Recorder */}
               <Route path="/" element={<Home />} />
               <Route path="/code" element={<Code />} />
             </Routes>
